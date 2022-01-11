@@ -1,0 +1,23 @@
+{
+  "name": "noovispherestudio.scriptableobjecteventsystem",
+  "version": "1.0.0",
+  "displayName": "ScriptableObject Event System",
+  "description": "This package provides a simple system to manage your events with Scriptable Object logic",
+  "unity": "2020.3",
+  "documentationUrl": "https://noovisphere.com/doc",
+  "changelogUrl": "https://noovisphere.com/changelog.html",
+  "licensesUrl": "https://noovisphere.com/licensing.html",
+  "dependencies": {
+
+  },
+  "keywords": [
+    "ScriptableObject",
+    "Event",
+    "System"
+  ],
+  "author": {
+    "name": "Noovisphere Studio",
+    "email": "cyril.triou@gmail.com",
+    "url": "https://noovisphere.com"
+  }
+}
