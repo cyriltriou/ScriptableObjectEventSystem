@@ -31,20 +31,20 @@ In a script component that needs to receive information, you will put as paramet
 [SerializeField] private VoidEventChannelSO _OnSceneReady = default;
 
 private void OnEnable()
-	{
-		if (_OnSceneReady != null)
-		{
-			_OnSceneReady.OnEventRaised += SpawnPlayer;
-		}
-	}
+{
+   if (_OnSceneReady != null)
+   {
+      _OnSceneReady.OnEventRaised += SpawnPlayer;
+   }
+}
 
 private void OnDisable()
-	{
-		if (_OnSceneReady != null)
-		{
-			_OnSceneReady.OnEventRaised -= SpawnPlayer;
-		}
-	}
+{
+  if (_OnSceneReady != null)
+  {
+    _OnSceneReady.OnEventRaised -= SpawnPlayer;
+  }
+}
 
 ```
 
