@@ -25,7 +25,7 @@ In a script component that needs to receive information, you will put as paramet
 
 - Example:
 
-```
+```cs
 
 [Header("Listening on channels")]
 [SerializeField] private VoidEventChannelSO _OnSceneReady = default;
@@ -54,7 +54,7 @@ In opposition, you script can to inform others about an event that occurs, it ra
 
 - Example:
 
-```
+```cs
 
 [Header("BroadCasting on channels")]	
 [SerializeField] private VoidEventChannelSO _onSceneReady = default;
@@ -79,7 +79,7 @@ Of course, you can simplify create a new event channel SO by following the same 
 
 - Example 1:
 
-```
+```cs
   
 using UnityEngine.Events;
 using UnityEngine;
@@ -106,7 +106,7 @@ Or something more elaborated:
 
 - Example 2:
 
-```
+```cs
 
 using UnityEngine;
 using System.Collections;
