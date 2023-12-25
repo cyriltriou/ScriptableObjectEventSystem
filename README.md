@@ -1,10 +1,10 @@
 # The package provides 
 
-ScriptableObjects scripts that are organised to have available a simple Event System based on ScriptObject logic.
+```ScriptableObjects``` scripts that are organised to have available a simple Event System based on ScriptObject logic.
 
 # How to use?
 
-In the system is quiet simple. You start by creating a SO instance by selecting the desired event in Unity menu **Assets > Create > Noovisphere Studio > Events**.
+In fact the system is quiet simple. You start by creating a SO instance by selecting the desired event in Unity menu **Assets > Create > Noovisphere Studio > Events**.
 
 The list of events available are the followings:
 - Void event channel
@@ -17,7 +17,7 @@ The event that is generated should be stored in a dedicated folder **"Scriptable
 
 # What is a channel?
 
-This event system creates a none coupled connection between your script. The channel is a then just an object that represents this connection. Then it is possible to listen or to broadcast information events. 
+This event system creates a none coupled connection between your script. The channel is then just an object that represents this connection. Then it is possible to listen or to broadcast information events. 
 
 # Where to use?
 
@@ -64,9 +64,9 @@ In opposition, you script can to inform others about an event that occurs, it ra
 /// </summary>
 private void SetActiveScene()
 {
-		[...]
-
-		_onSceneReady.RaiseEvent(); //Spawn system will spawn the player
+   [...]
+   _onSceneReady.RaiseEvent();
+   //Spawn system will spawn the player
 }
 
 ```
@@ -92,9 +92,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Events/UI/Item Event Channel")]
 public class ItemEventChannelSO : ScriptableObject
 {
-	public UnityAction<Item> OnEventRaised;
-	public void RaiseEvent(Item item)
-	{
+   public UnityAction<Item> OnEventRaised;
+   public void RaiseEvent(Item item)
+   {
 		if (OnEventRaised != null)
 			OnEventRaised.Invoke(item);
 	}
