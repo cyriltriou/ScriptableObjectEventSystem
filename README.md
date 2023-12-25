@@ -100,8 +100,14 @@ public class ItemEventChannelSO : ScriptableObject
 	}
 }
 
+```
+
 Or something more elaborated:
-Example 2:
+
+- Example 2:
+
+```
+
 using UnityEngine;
 using System.Collections;
 using UnityEngine.Events;
