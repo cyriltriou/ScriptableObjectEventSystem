@@ -1,8 +1,10 @@
-The package provides ScriptableObjects scripts that are organised to have available a simple Event System based on ScriptObject logic.
+# The package provides 
 
-How to use?
+ScriptableObjects scripts that are organised to have available a simple Event System based on ScriptObject logic.
 
-In the system is quiet simple. You start by creating a SO instance by selecting the desired event in Unity menu Assets > Create > Noovisphere Studio > Events.
+# How to use?
+
+In the system is quiet simple. You start by creating a SO instance by selecting the desired event in Unity menu **Assets > Create > Noovisphere Studio > Events**.
 
 The list of events available are the followings:
 - Void event channel
@@ -11,14 +13,20 @@ The list of events available are the followings:
 - GameObject event channel
 - Transform event channel
 
-The event that is generated should be stored in a dedicated folder "ScriptableObjects" in Assets folder for example for a best organization of your code, but it is up to you to do as you want ;)
+The event that is generated should be stored in a dedicated folder **"ScriptableObjects"** in Assets folder for example for a best organization of your code, but it is up to you to do as you want ;)
 
-What is a channel?
+# What is a channel?
+
 This event system creates a none coupled connection between your script. The channel is a then just an object that represents this connection. Then it is possible to listen or to broadcast information events. 
 
-Where to use?
+# Where to use?
+
 In a script component that needs to receive information, you will put as parameter the event with the right type. In order word you will listen to this channel.
-Example:
+
+- Example:
+
+```
+
 [Header("Listening on channels")]
 [SerializeField] private VoidEventChannelSO _OnSceneReady = default;
 
@@ -38,11 +46,16 @@ private void OnDisable()
 		}
 	}
 
+```
+
 When the event is raised this script is informed and then can proceed with a callback on the method defined. This event is registered then it must also be unregistered to avoid persistence inside the editor during development and so avoid some troubles.
 
 In opposition, you script can to inform others about an event that occurs, it raises an event or broadcast information. Thus you must add a parameter to broadcast to the channel.
 
-Example:
+- Example:
+
+```
+
 [Header("BroadCasting on channels")]	
 [SerializeField] private VoidEventChannelSO _onSceneReady = default;
 
@@ -56,13 +69,18 @@ private void SetActiveScene()
 		_onSceneReady.RaiseEvent(); //Spawn system will spawn the player
 }
 
+```
+
 With simple lines of code, you have a simple system that permits to decouple the different parts of your application!
 
-How to custom?
+# How to custom?
 
-Of course, you can simplify create a new event channel SO by following the same logic that for example "GameObjectEventChannelSO".
+Of course, you can simplify create a new event channel SO by following the same logic that for example **"GameObjectEventChannelSO"**.
 
-Example 1:
+- Example 1:
+
+```
+  
 using UnityEngine.Events;
 using UnityEngine;
 
@@ -158,13 +176,17 @@ public delegate AudioCueKey AudioCuePlayAction(AudioCueSO audioCue, AudioConfigu
 public delegate bool AudioCueStopAction(AudioCueKey emitterKey);
 public delegate bool AudioCueFinishAction(AudioCueKey emitterKey);
 
-What is the story of this package?
+```
 
-The ScriptableObject approach for Event System has been originally inspired by a talk of Ryan Hipple during a Unity Event called "Unite Austin 2017". His conference "Game Architecture with Scriptable Objects" is available on Youtube here: https://youtu.be/raQ3iHhE_Kk
+# What is the story of this package?
+
+The ScriptableObject approach for Event System has been originally inspired by a talk of Ryan Hipple during a Unity Event called "Unite Austin 2017". 
+His conference **"Game Architecture with Scriptable Objects"** is available on Youtube [here](https://youtu.be/raQ3iHhE_Kk)
 
 The implementation proposed in this package is more a less the same.
 
-Another inspiration for this package comes from the Unity Open Project in 2020 called Chop Chop that uses this approach. You can find source in github repository of this project here: https://github.com/UnityTechnologies/open-project-1
-And the session 1 of the project on Youtube here: https://youtu.be/O4N4s6BKNH0
+Another inspiration for this package comes from the Unity Open Project in 2020 called Chop Chop that uses this approach. You can find source in github repository of this project [here](https://github.com/UnityTechnologies/open-project-1)
+
+And the session 1 of the project on Youtube [here](https://youtu.be/O4N4s6BKNH0)
 
 
