@@ -1,6 +1,6 @@
 # The package provides 
 
-```ScriptableObjects``` scripts that are organised to have available a simple Event System based on ScriptObject logic.
+```ScriptableObjects``` scripts that are organised to get a simple Event System based on ScriptObject logic.
 
 # How to use?
 
